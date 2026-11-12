@@ -1,0 +1,62 @@
+[
+  {
+    "run_id": "d16ab8b3-5cef-4fb2-9609-36d5f51f0a4f",
+    "job_name": "weekly_training_job",
+    "started_at": "2026-11-11T20:44:23.459265+00:00",
+    "finished_at": "2026-11-11T20:44:25.475633+00:00",
+    "duration_seconds": 2.016368,
+    "status": "SUCCESS",
+    "record_count": 10000,
+    "error": null
+  },
+  {
+    "run_id": "6c982ed0-cdb7-4d79-9a48-d2fff3cb6805",
+    "job_name": "daily_scoring_job",
+    "started_at": "2026-11-11T20:44:25.707039+00:00",
+    "finished_at": "2026-11-11T20:44:27.238583+00:00",
+    "duration_seconds": 1.531544,
+    "status": "FAILURE",
+    "record_count": 0,
+    "error": "Dagster job failed; inspect persisted event log"
+  },
+  {
+    "run_id": "5cb3476a-83b6-43a5-bd77-4581fd3a087d",
+    "job_name": "weekly_training_job",
+    "started_at": "2026-11-11T20:45:57.476347+00:00",
+    "finished_at": "2026-11-11T20:45:58.091012+00:00",
+    "duration_seconds": 0.614665,
+    "status": "SUCCESS",
+    "record_count": 10000,
+    "error": null
+  },
+  {
+    "run_id": "189c55fd-8f67-4f71-b1a8-70f42e2b7e11",
+    "job_name": "daily_scoring_job",
+    "started_at": "2026-11-11T20:45:58.363014+00:00",
+    "finished_at": "2026-11-11T20:46:00.136829+00:00",
+    "duration_seconds": 1.773815,
+    "status": "SUCCESS",
+    "record_count": 200,
+    "error": null
+  },
+  {
+    "run_id": "9cd5bb51-bf5c-43dc-bb04-85f10144affe",
+    "job_name": "weekly_training_job",
+    "started_at": "2026-11-11T20:52:26.670367+00:00",
+    "finished_at": "2026-11-11T20:52:28.539138+00:00",
+    "duration_seconds": 1.868771,
+    "status": "SUCCESS",
+    "record_count": 10000,
+    "error": null
+  },
+  {
+    "run_id": "0b15bf5e-d0a8-44b4-bb59-ac73f8a7569f",
+    "job_name": "daily_scoring_job",
+    "started_at": "2026-11-11T20:52:28.827834+00:00",
+    "finished_at": "2026-11-11T20:52:30.374080+00:00",
+    "duration_seconds": 1.546246,
+    "status": "SUCCESS",
+    "record_count": 200,
+    "error": null
+  }
+]

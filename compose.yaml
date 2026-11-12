@@ -1,0 +1,14 @@
+services:
+  api:
+    image: ups-pricing-deployment:local
+    build: .
+    # A single API needs no private network or service discovery; reuse Docker's bridge.
+    network_mode: bridge
+    ports:
+      - "127.0.0.1:${DOCKER_PORT:-8001}:8000"
+    volumes:
+      - ./artifacts:/app/state/artifacts:ro
+      - ./data:/app/state/data
+    environment:
+      UPS_PRICING_HOME: /app/state
+    restart: unless-stopped

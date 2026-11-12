@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-11-11T21:04:18.826036+00:00",
+  "checks": {
+    "approved_version_matches_validated_history": true,
+    "frozen_source_unchanged": true,
+    "readme_exists": true,
+    "interview_guide_exists": true,
+    "delivery_report_exists": true
+  },
+  "diagnostic_note": "Normalize SQLite timestamp strings through validation before comparing with the training asset fingerprint."
+}

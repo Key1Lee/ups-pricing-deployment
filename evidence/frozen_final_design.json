@@ -1,0 +1,42 @@
+{
+  "frozen_at": "2026-11-11T20:57:42.877866+00:00",
+  "history_seed": 2026,
+  "model_settings": {
+    "seed": 42,
+    "xgb_trees": 180,
+    "xgb_depth": 3,
+    "learning_rate": 0.045
+  },
+  "dependencies": {
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.4.1",
+    "pandas": "2.3.3",
+    "numpy": "2.5.4",
+    "dagster": "1.13.29"
+  },
+  "selection": "validation log loss among valid curves",
+  "approval": {
+    "auc_min": 0.75,
+    "log_loss_max": 0.6,
+    "brier_max": 0.22,
+    "curve_failures_max": 0
+  },
+  "source_sha256": {
+    "src/shipping/__init__.py": "19e4e347fef97cde0c40f13d5037465ed029f61fef2b4e23cc7655acad6e64a7",
+    "src/shipping/api.py": "4226be027eb412fc3f1f682b0255ffe711efedabb565e8cbb37a78222d45b75e",
+    "src/shipping/cli.py": "f1262decaf89b568a32ecafd32153f55e9c4e25f21e4bf8a341ace23eaecc65e",
+    "src/shipping/config.py": "1461a2f3ec562c7477ea5dffa2c686961b0ad64ee0301ce6df8c9f08ad0503cd",
+    "src/shipping/data.py": "32ece1ac9e60209aade44c6f4f3fa2c55d55636084873f62822c6f8b3af78357",
+    "src/shipping/definitions.py": "ea32df9fcbb3ceb9ac9cac80229f2a021886c5864d2c07ed4f501a266575c49f",
+    "src/shipping/features.py": "bcb4d72b086b33b5072c2003dc16a56098b3e2d4af6bbf1bd9b6707706dc3c7d",
+    "src/shipping/modeling.py": "ad70b464d61c708098951e6a80b13776c30ab460ccaf5bf5ad961fbfb311ed4e",
+    "src/shipping/monitoring.py": "ab6d7248f8f7a883dc735ef4ad5846d6ec80696a85f470bd2c654f5625d2effc",
+    "src/shipping/outcomes.py": "5ab8d69b1ccd23c3ec6d0f8ed67be5dac9d1359563a38be3580c89f636aa8724",
+    "src/shipping/pricing.py": "48a481c69b8337d82a72ab0e6518d8eadc620653e9df33b3c7b10e65fb189bcf",
+    "src/shipping/registry.py": "6c59238ac9a3151bd08b99101ec649bf01c27855ac3ef0bef97502c7c53a2bf7",
+    "src/shipping/smoke.py": "467de4bceeda406ded01b4bccaae8146bbef7a0062ec1f0213fb322a2cdb3f6b",
+    "src/shipping/storage.py": "06eb131f546af8cd189e90b65b12f63f39a5fb19ed0414908de21d22bd99e819",
+    "src/shipping/validation.py": "eaed7da16e5f4853e686160760af015933855d18401ce6dae06aa0b1bfc04d14"
+  },
+  "final_test_policy": "Independent seed chosen before training; do not tune settings on final results."
+}

@@ -1,0 +1,99 @@
+{
+  "run_id": "0aca004d-35df-4717-aff0-823aa7939508",
+  "batch_date": "2025-08-29",
+  "created_at": "2026-11-11T20:59:29.068696+00:00",
+  "new_quotes_processed": 200,
+  "successful_recommendations": 200,
+  "model_version_loaded": "model-75c4c0d2390c0016",
+  "persisted_model_versions": [
+    "model-75c4c0d2390c0016"
+  ],
+  "average_batch_inference_ms": 5.888793305066429,
+  "predicted_expected_contribution_total": 1534.878800549507,
+  "api_scope": "all locally recorded requests since database creation",
+  "failed_requests": 1,
+  "api_request_count": 9,
+  "average_api_latency_ms": 2.61614366665223,
+  "failed_pipeline_runs_total": 0,
+  "drift": {
+    "weight_lbs": {
+      "statistic": "KS",
+      "value": 0.05145258189100274,
+      "warning": false
+    },
+    "shipping_zone": {
+      "statistic": "KS",
+      "value": 0.07425332570447718,
+      "warning": false
+    },
+    "package_volume": {
+      "statistic": "KS",
+      "value": 0.039211843799170365,
+      "warning": false
+    },
+    "fuel_surcharge_pct": {
+      "statistic": "KS",
+      "value": 0.5193820626519812,
+      "warning": true
+    },
+    "estimated_shipping_cost": {
+      "statistic": "KS",
+      "value": 0.09241310256043489,
+      "warning": false
+    },
+    "quoted_price": {
+      "statistic": "KS",
+      "value": 0.08515877556858817,
+      "warning": false
+    },
+    "markup_ratio": {
+      "statistic": "KS",
+      "value": 0.062167071949649544,
+      "warning": false
+    },
+    "day_of_week": {
+      "statistic": "KS",
+      "value": 0.5683021027034759,
+      "warning": true
+    },
+    "month": {
+      "statistic": "KS",
+      "value": 1.0,
+      "warning": true
+    },
+    "service_level": {
+      "statistic": "total_variation",
+      "value": 0.07593763410098703,
+      "warning": false
+    },
+    "customer_segment": {
+      "statistic": "total_variation",
+      "value": 0.04454226863109714,
+      "warning": false
+    }
+  },
+  "drift_note": "Heuristic warnings, not significance tests; month/day shifts may be expected seasonality",
+  "outcomes_as_of": "2026-11-11T20:59:29.068696+00:00",
+  "observed_outcomes": {
+    "labeled_quotes": 200,
+    "label_source": "synthetic_simulator",
+    "observed_acceptance_rate": 0.58,
+    "brier_score": 0.23692189292745558,
+    "log_loss": 0.6693894316122784,
+    "calibration": {
+      "mean_predicted": [
+        0.5236303978241407,
+        0.6955182679736888,
+        0.8403805704677806
+      ],
+      "fraction_accepted": [
+        0.4807692307692308,
+        0.6106870229007634,
+        0.6470588235294118
+      ]
+    },
+    "simulated_realized_contribution": 1378.6399999999999
+  },
+  "experimentally_verified_incremental_profit": null,
+  "interpretation": "Synthetic predictive estimates; no real-world causal uplift is measured"
+}

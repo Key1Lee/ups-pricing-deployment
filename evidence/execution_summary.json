@@ -1,0 +1,818 @@
+{
+  "captured_at": "2026-11-11T21:00:38.974191+00:00",
+  "counts": {
+    "historical_quotes": 10000,
+    "daily_quotes": 200,
+    "recommendations": 200,
+    "runs": 4,
+    "monitoring": 3,
+    "api_events": 44,
+    "observed_outcomes": 200
+  },
+  "duplicate_recommendation_ids": 0,
+  "runs": [
+    {
+      "run_id": "9f0007b4-1ceb-4753-bcc8-a161a616db87",
+      "job_name": "weekly_training_job",
+      "started_at": "2026-11-11T20:58:26.747776+00:00",
+      "finished_at": "2026-11-11T20:58:28.581799+00:00",
+      "duration_seconds": 1.834023,
+      "status": "SUCCESS",
+      "record_count": 10000,
+      "error": null
+    },
+    {
+      "run_id": "c2f67897-c492-4c1f-82c3-ac5e4bf2017f",
+      "job_name": "daily_scoring_job",
+      "started_at": "2026-11-11T20:58:28.816716+00:00",
+      "finished_at": "2026-11-11T20:58:30.318898+00:00",
+      "duration_seconds": 1.502182,
+      "status": "SUCCESS",
+      "record_count": 200,
+      "error": null
+    },
+    {
+      "run_id": "a33fffc0-8075-4c84-bfa5-cacaff0b1486",
+      "job_name": "weekly_training_job",
+      "started_at": "2026-11-11T20:59:20.541801+00:00",
+      "finished_at": "2026-11-11T20:59:21.087584+00:00",
+      "duration_seconds": 0.545783,
+      "status": "SUCCESS",
+      "record_count": 10000,
+      "error": null
+    },
+    {
+      "run_id": "87690c7e-f846-4ded-8891-4213806aac5c",
+      "job_name": "daily_scoring_job",
+      "started_at": "2026-11-11T20:59:23.782761+00:00",
+      "finished_at": "2026-11-11T20:59:25.318829+00:00",
+      "duration_seconds": 1.536068,
+      "status": "SUCCESS",
+      "record_count": 200,
+      "error": null
+    }
+  ],
+  "approved": {
+    "version": "model-75c4c0d2390c0016",
+    "model_name": "xgboost",
+    "sha256": "759e6330dfe43c3d5d14c1d76561105204dee185208b780059209a5773b1d87a",
+    "approved_at": "2026-11-11T20:58:28.508522+00:00",
+    "approval_checks": {
+      "validation_auc_at_least_0.75": true,
+      "validation_log_loss_at_most_0.60": true,
+      "validation_brier_at_most_0.22": true,
+      "validation_price_curves_pass": true
+    }
+  },
+  "metrics": {
+    "validation": {
+      "logistic_regression": {
+        "roc_auc": 0.9009213352335455,
+        "log_loss": 0.39893792437572667,
+        "brier_score": 0.1277640569496956,
+        "median_inference_ms": 3.77074999960314,
+        "acceptance_rate": 0.5434015525758645,
+        "rows": 1417,
+        "calibration": {
+          "mean_predicted": [
+            0.052508655996204204,
+            0.1466247284118259,
+            0.2455838148878046,
+            0.34713868689701016,
+            0.4509561800581446,
+            0.5558127306200458,
+            0.6509345234233688,
+            0.7532785752925494,
+            0.854223092740752,
+            0.9549063032048236
+          ],
+          "fraction_accepted": [
+            0.06976744186046512,
+            0.14935064935064934,
+            0.36363636363636365,
+            0.37037037037037035,
+            0.45121951219512196,
+            0.5862068965517241,
+            0.6455696202531646,
+            0.8152173913043478,
+            0.8588957055214724,
+            0.9807073954983923
+          ]
+        },
+        "acceptance_by_price_band": [
+          {
+            "price_band": "(0.0, 15.0]",
+            "count": 195,
+            "acceptance_rate": 0.8153846153846154,
+            "mean_predicted_probability": 0.7526936505368664
+          },
+          {
+            "price_band": "(15.0, 25.0]",
+            "count": 479,
+            "acceptance_rate": 0.5365344467640919,
+            "mean_predicted_probability": 0.5268008547358395
+          },
+          {
+            "price_band": "(25.0, 40.0]",
+            "count": 430,
+            "acceptance_rate": 0.49534883720930234,
+            "mean_predicted_probability": 0.47005411888219006
+          },
+          {
+            "price_band": "(40.0, 60.0]",
+            "count": 231,
+            "acceptance_rate": 0.45021645021645024,
+            "mean_predicted_probability": 0.427875244579324
+          },
+          {
+            "price_band": "(60.0, 100.0]",
+            "count": 76,
+            "acceptance_rate": 0.4473684210526316,
+            "mean_predicted_probability": 0.4144119623645046
+          },
+          {
+            "price_band": "(100.0, inf]",
+            "count": 6,
+            "acceptance_rate": 0.5,
+            "mean_predicted_probability": 0.32717611470821845
+          }
+        ]
+      },
+      "xgboost": {
+        "roc_auc": 0.9011100182661235,
+        "log_loss": 0.39889511466026306,
+        "brier_score": 0.1278320997953415,
+        "median_inference_ms": 3.706166999108973,
+        "acceptance_rate": 0.5434015525758645,
+        "rows": 1417,
+        "calibration": {
+          "mean_predicted": [
+            0.04811230528035334,
+            0.14473754015282123,
+            0.24612253062103107,
+            0.34654908014249197,
+            0.45536341411726816,
+            0.5491768634596537,
+            0.6509120346501817,
+            0.7544529525672689,
+            0.861552426879038,
+            0.9501087565270682
+          ],
+          "fraction_accepted": [
+            0.06593406593406594,
+            0.18248175182481752,
+            0.31521739130434784,
+            0.35443037974683544,
+            0.47959183673469385,
+            0.5581395348837209,
+            0.6744186046511628,
+            0.7450980392156863,
+            0.8791946308724832,
+            0.9841269841269841
+          ]
+        },
+        "acceptance_by_price_band": [
+          {
+            "price_band": "(0.0, 15.0]",
+            "count": 195,
+            "acceptance_rate": 0.8153846153846154,
+            "mean_predicted_probability": 0.7540768980979919
+          },
+          {
+            "price_band": "(15.0, 25.0]",
+            "count": 479,
+            "acceptance_rate": 0.5365344467640919,
+            "mean_predicted_probability": 0.527614414691925
+          },
+          {
+            "price_band": "(25.0, 40.0]",
+            "count": 430,
+            "acceptance_rate": 0.49534883720930234,
+            "mean_predicted_probability": 0.4762449264526367
+          },
+          {
+            "price_band": "(40.0, 60.0]",
+            "count": 231,
+            "acceptance_rate": 0.45021645021645024,
+            "mean_predicted_probability": 0.43261149525642395
+          },
+          {
+            "price_band": "(60.0, 100.0]",
+            "count": 76,
+            "acceptance_rate": 0.4473684210526316,
+            "mean_predicted_probability": 0.3823866546154022
+          },
+          {
+            "price_band": "(100.0, inf]",
+            "count": 6,
+            "acceptance_rate": 0.5,
+            "mean_predicted_probability": 0.31251662969589233
+          }
+        ]
+      }
+    },
+    "test": {
+      "logistic_regression": {
+        "roc_auc": 0.9082888782605496,
+        "log_loss": 0.3840346428770105,
+        "brier_score": 0.1214209109897575,
+        "median_inference_ms": 3.664750000098138,
+        "acceptance_rate": 0.521680216802168,
+        "rows": 1476,
+        "calibration": {
+          "mean_predicted": [
+            0.050957227000217174,
+            0.1423257602350659,
+            0.24463120258684676,
+            0.34695484414680877,
+            0.45020644658359626,
+            0.5539011051605013,
+            0.6529169757105043,
+            0.753559361629195,
+            0.8523477494994256,
+            0.9531135596704384
+          ],
+          "fraction_accepted": [
+            0.05,
+            0.12574850299401197,
+            0.2641509433962264,
+            0.3793103448275862,
+            0.45121951219512196,
+            0.6621621621621622,
+            0.6049382716049383,
+            0.7787610619469026,
+            0.8520710059171598,
+            0.9684542586750788
+          ]
+        },
+        "acceptance_by_price_band": [
+          {
+            "price_band": "(0.0, 15.0]",
+            "count": 210,
+            "acceptance_rate": 0.7619047619047619,
+            "mean_predicted_probability": 0.7790117543621423
+          },
+          {
+            "price_band": "(15.0, 25.0]",
+            "count": 520,
+            "acceptance_rate": 0.5173076923076924,
+            "mean_predicted_probability": 0.5081524833141502
+          },
+          {
+            "price_band": "(25.0, 40.0]",
+            "count": 482,
+            "acceptance_rate": 0.48132780082987553,
+            "mean_predicted_probability": 0.46885990187572507
+          },
+          {
+            "price_band": "(40.0, 60.0]",
+            "count": 184,
+            "acceptance_rate": 0.41847826086956524,
+            "mean_predicted_probability": 0.4142474868664146
+          },
+          {
+            "price_band": "(60.0, 100.0]",
+            "count": 72,
+            "acceptance_rate": 0.4027777777777778,
+            "mean_predicted_probability": 0.32341186466268207
+          },
+          {
+            "price_band": "(100.0, inf]",
+            "count": 8,
+            "acceptance_rate": 0.375,
+            "mean_predicted_probability": 0.3688551913709702
+          }
+        ]
+      },
+      "xgboost": {
+        "roc_auc": 0.9062893197454104,
+        "log_loss": 0.3880072236061096,
+        "brier_score": 0.1225898265838623,
+        "median_inference_ms": 3.6762500003533205,
+        "acceptance_rate": 0.521680216802168,
+        "rows": 1476,
+        "calibration": {
+          "mean_predicted": [
+            0.047268688155839414,
+            0.1491587616246322,
+            0.25034695203156815,
+            0.35001876950263977,
+            0.45679916355801725,
+            0.5467114182742866,
+            0.6546930382126256,
+            0.7520908868613363,
+            0.8594063308089972,
+            0.9481342481889935
+          ],
+          "fraction_accepted": [
+            0.046511627906976744,
+            0.15172413793103448,
+            0.2268041237113402,
+            0.4074074074074074,
+            0.41379310344827586,
+            0.5945945945945946,
+            0.7263157894736842,
+            0.7647058823529411,
+            0.81875,
+            0.9716088328075709
+          ]
+        },
+        "acceptance_by_price_band": [
+          {
+            "price_band": "(0.0, 15.0]",
+            "count": 210,
+            "acceptance_rate": 0.7619047619047619,
+            "mean_predicted_probability": 0.7843174338340759
+          },
+          {
+            "price_band": "(15.0, 25.0]",
+            "count": 520,
+            "acceptance_rate": 0.5173076923076924,
+            "mean_predicted_probability": 0.5080136656761169
+          },
+          {
+            "price_band": "(25.0, 40.0]",
+            "count": 482,
+            "acceptance_rate": 0.48132780082987553,
+            "mean_predicted_probability": 0.47205621004104614
+          },
+          {
+            "price_band": "(40.0, 60.0]",
+            "count": 184,
+            "acceptance_rate": 0.41847826086956524,
+            "mean_predicted_probability": 0.419864684343338
+          },
+          {
+            "price_band": "(60.0, 100.0]",
+            "count": 72,
+            "acceptance_rate": 0.4027777777777778,
+            "mean_predicted_probability": 0.3105021119117737
+          },
+          {
+            "price_band": "(100.0, inf]",
+            "count": 8,
+            "acceptance_rate": 0.375,
+            "mean_predicted_probability": 0.3039170503616333
+          }
+        ]
+      }
+    }
+  },
+  "splits": {
+    "train": {
+      "start": "2025-01-01 00:00:00+00:00",
+      "end_exclusive": "2025-06-18 00:00:00+00:00",
+      "rows": 6991,
+      "late_labels_excluded": 57
+    },
+    "validation": {
+      "start": "2025-06-18 00:00:00+00:00",
+      "end_exclusive": "2025-07-24 00:00:00+00:00",
+      "rows": 1417,
+      "late_labels_excluded": 59
+    },
+    "test": {
+      "start": "2025-07-24 00:00:00+00:00",
+      "end_exclusive": "2025-08-29 00:00:00+00:00",
+      "rows": 1476
+    },
+    "final_evaluation_as_of": "2025-08-31 13:27:42+00:00"
+  },
+  "top_features": [
+    {
+      "feature": "numeric__markup_ratio",
+      "importance": 0.5003172755241394
+    },
+    {
+      "feature": "category__customer_segment_occasional",
+      "importance": 0.10017728805541992
+    },
+    {
+      "feature": "category__customer_segment_enterprise",
+      "importance": 0.08583398163318634
+    },
+    {
+      "feature": "category__service_level_ground",
+      "importance": 0.06348782032728195
+    },
+    {
+      "feature": "category__service_level_next_day",
+      "importance": 0.04721192643046379
+    },
+    {
+      "feature": "numeric__shipping_zone",
+      "importance": 0.03789249062538147
+    },
+    {
+      "feature": "numeric__estimated_shipping_cost",
+      "importance": 0.03653419762849808
+    },
+    {
+      "feature": "numeric__fuel_surcharge_pct",
+      "importance": 0.034667178988456726
+    },
+    {
+      "feature": "numeric__weight_lbs",
+      "importance": 0.024214887991547585
+    },
+    {
+      "feature": "numeric__month",
+      "importance": 0.022509125992655754
+    }
+  ],
+  "dagster_ui": {
+    "status_code": 200,
+    "response": {
+      "data": {
+        "repositoriesOrError": {
+          "__typename": "RepositoryConnection",
+          "nodes": [
+            {
+              "name": "__repository__",
+              "jobs": [
+                {
+                  "name": "__ASSET_JOB"
+                },
+                {
+                  "name": "daily_scoring_job"
+                },
+                {
+                  "name": "weekly_training_job"
+                }
+              ],
+              "schedules": [
+                {
+                  "name": "daily_schedule",
+                  "cronSchedule": "0 6 * * *"
+                },
+                {
+                  "name": "weekly_training_schedule",
+                  "cronSchedule": "0 3 * * 0"
+                }
+              ],
+              "assetNodes": [
+                {
+                  "assetKey": {
+                    "path": [
+                      "approved_model"
+                    ]
+                  }
+                },
+                {
+                  "assetKey": {
+                    "path": [
+                      "daily_features"
+                    ]
+                  }
+                },
+                {
+                  "assetKey": {
+                    "path": [
+                      "daily_monitoring"
+                    ]
+                  }
+                },
+                {
+                  "assetKey": {
+                    "path": [
+                      "historical_data"
+                    ]
+                  }
+                },
+                {
+                  "assetKey": {
+                    "path": [
+                      "model_approval"
+                    ]
+                  }
+                },
+                {
+                  "assetKey": {
+                    "path": [
+                      "model_evaluation"
+                    ]
+                  }
+                },
+                {
+                  "assetKey": {
+                    "path": [
+                      "new_shipping_quotes"
+                    ]
+                  }
+                },
+                {
+                  "assetKey": {
+                    "path": [
+                      "persisted_recommendations"
+                    ]
+                  }
+                },
+                {
+                  "assetKey": {
+                    "path": [
+                      "price_recommendations"
+                    ]
+                  }
+                },
+                {
+                  "assetKey": {
+                    "path": [
+                      "trained_models"
+                    ]
+                  }
+                },
+                {
+                  "assetKey": {
+                    "path": [
+                      "training_features"
+                    ]
+                  }
+                },
+                {
+                  "assetKey": {
+                    "path": [
+                      "validated_daily"
+                    ]
+                  }
+                },
+                {
+                  "assetKey": {
+                    "path": [
+                      "validated_history"
+                    ]
+                  }
+                },
+                {
+                  "assetKey": {
+                    "path": [
+                      "versioned_model_artifact"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "http": {
+    "local": {
+      "ready_status": 200,
+      "ready": {
+        "status": "ready",
+        "model_version": "model-75c4c0d2390c0016"
+      }
+    },
+    "docker": {
+      "ready_status": 200,
+      "ready": {
+        "status": "ready",
+        "model_version": "model-75c4c0d2390c0016"
+      }
+    }
+  },
+  "docker": {
+    "server_version": "29.8.2",
+    "image_id": "sha256:d0657e1da554d728ec117a14872a392f831f70ddb94468105d177151744ebb5c",
+    "architecture": "arm64",
+    "status": "running",
+    "health": "healthy",
+    "network_mode": "bridge",
+    "mounts": [
+      {
+        "source": "/Users/key/worktrees/_AI-OS/topaz-garnet/_AI-OS/projects/ups-pricing-deployment/artifacts",
+        "destination": "/app/state/artifacts",
+        "read_write": false
+      },
+      {
+        "source": "/Users/key/worktrees/_AI-OS/topaz-garnet/_AI-OS/projects/ups-pricing-deployment/data",
+        "destination": "/app/state/data",
+        "read_write": true
+      }
+    ]
+  },
+  "sqlite_schema": {
+    "historical_quotes": [
+      {
+        "cid": 0,
+        "name": "quote_id",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "quote_timestamp",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "shipping_zone",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "service_level",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "customer_segment",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "weight_lbs",
+        "type": "REAL",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 6,
+        "name": "length_in",
+        "type": "REAL",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 7,
+        "name": "width_in",
+        "type": "REAL",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 8,
+        "name": "height_in",
+        "type": "REAL",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 9,
+        "name": "fuel_surcharge_pct",
+        "type": "REAL",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 10,
+        "name": "estimated_shipping_cost",
+        "type": "REAL",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 11,
+        "name": "quoted_price",
+        "type": "REAL",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 12,
+        "name": "accepted_quote",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 13,
+        "name": "outcome_timestamp",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      }
+    ],
+    "daily_quotes": [
+      {
+        "cid": 0,
+        "name": "quote_id",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "quote_timestamp",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "shipping_zone",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "service_level",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "customer_segment",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "weight_lbs",
+        "type": "REAL",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 6,
+        "name": "length_in",
+        "type": "REAL",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 7,
+        "name": "width_in",
+        "type": "REAL",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 8,
+        "name": "height_in",
+        "type": "REAL",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 9,
+        "name": "fuel_surcharge_pct",
+        "type": "REAL",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 10,
+        "name": "estimated_shipping_cost",
+        "type": "REAL",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 11,
+        "name": "quoted_price",
+        "type": "REAL",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 12,
+        "name": "batch_date",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      }
+    ]
+  },
+  "frozen_source_unchanged": true
+}

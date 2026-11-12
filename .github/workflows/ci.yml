@@ -1,0 +1,24 @@
+name: shipping-pricing
+on: [push, pull_request]
+jobs:
+  local-integration:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.11.16"
+      - run: make setup
+      - run: make lint
+      - run: make test
+      - run: make demo
+      - name: Start API and use real HTTP
+        run: |
+          make serve > /tmp/shipping-api.log 2>&1 &
+          make smoke
+      - name: Exercise the actual model in Docker
+        run: |
+          make docker-up
+          make docker-smoke
+      - if: always()
+        run: docker compose logs && docker compose down

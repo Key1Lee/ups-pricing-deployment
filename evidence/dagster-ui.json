@@ -1,0 +1,136 @@
+{
+  "status_code": 200,
+  "response": {
+    "data": {
+      "repositoriesOrError": {
+        "__typename": "RepositoryConnection",
+        "nodes": [
+          {
+            "name": "__repository__",
+            "jobs": [
+              {
+                "name": "__ASSET_JOB"
+              },
+              {
+                "name": "daily_scoring_job"
+              },
+              {
+                "name": "weekly_training_job"
+              }
+            ],
+            "schedules": [
+              {
+                "name": "daily_schedule",
+                "cronSchedule": "0 6 * * *"
+              },
+              {
+                "name": "weekly_training_schedule",
+                "cronSchedule": "0 3 * * 0"
+              }
+            ],
+            "assetNodes": [
+              {
+                "assetKey": {
+                  "path": [
+                    "approved_model"
+                  ]
+                }
+              },
+              {
+                "assetKey": {
+                  "path": [
+                    "daily_features"
+                  ]
+                }
+              },
+              {
+                "assetKey": {
+                  "path": [
+                    "daily_monitoring"
+                  ]
+                }
+              },
+              {
+                "assetKey": {
+                  "path": [
+                    "historical_data"
+                  ]
+                }
+              },
+              {
+                "assetKey": {
+                  "path": [
+                    "model_approval"
+                  ]
+                }
+              },
+              {
+                "assetKey": {
+                  "path": [
+                    "model_evaluation"
+                  ]
+                }
+              },
+              {
+                "assetKey": {
+                  "path": [
+                    "new_shipping_quotes"
+                  ]
+                }
+              },
+              {
+                "assetKey": {
+                  "path": [
+                    "persisted_recommendations"
+                  ]
+                }
+              },
+              {
+                "assetKey": {
+                  "path": [
+                    "price_recommendations"
+                  ]
+                }
+              },
+              {
+                "assetKey": {
+                  "path": [
+                    "trained_models"
+                  ]
+                }
+              },
+              {
+                "assetKey": {
+                  "path": [
+                    "training_features"
+                  ]
+                }
+              },
+              {
+                "assetKey": {
+                  "path": [
+                    "validated_daily"
+                  ]
+                }
+              },
+              {
+                "assetKey": {
+                  "path": [
+                    "validated_history"
+                  ]
+                }
+              },
+              {
+                "assetKey": {
+                  "path": [
+                    "versioned_model_artifact"
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

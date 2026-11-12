@@ -1,0 +1,10 @@
+.venv/
+.dagster/
+data/
+artifacts/
+evidence/*.log
+evidence/development-runtime/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/

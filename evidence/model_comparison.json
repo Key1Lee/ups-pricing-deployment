@@ -1,0 +1,387 @@
+{
+  "version": "model-75c4c0d2390c0016",
+  "selected_model": "xgboost",
+  "selection_rule": "Lowest validation log loss among models passing all validation price-curve checks",
+  "validation": {
+    "logistic_regression": {
+      "roc_auc": 0.9009213352335455,
+      "log_loss": 0.39893792437572667,
+      "brier_score": 0.1277640569496956,
+      "median_inference_ms": 3.77074999960314,
+      "acceptance_rate": 0.5434015525758645,
+      "rows": 1417,
+      "calibration": {
+        "mean_predicted": [
+          0.052508655996204204,
+          0.1466247284118259,
+          0.2455838148878046,
+          0.34713868689701016,
+          0.4509561800581446,
+          0.5558127306200458,
+          0.6509345234233688,
+          0.7532785752925494,
+          0.854223092740752,
+          0.9549063032048236
+        ],
+        "fraction_accepted": [
+          0.06976744186046512,
+          0.14935064935064934,
+          0.36363636363636365,
+          0.37037037037037035,
+          0.45121951219512196,
+          0.5862068965517241,
+          0.6455696202531646,
+          0.8152173913043478,
+          0.8588957055214724,
+          0.9807073954983923
+        ]
+      },
+      "acceptance_by_price_band": [
+        {
+          "price_band": "(0.0, 15.0]",
+          "count": 195,
+          "acceptance_rate": 0.8153846153846154,
+          "mean_predicted_probability": 0.7526936505368664
+        },
+        {
+          "price_band": "(15.0, 25.0]",
+          "count": 479,
+          "acceptance_rate": 0.5365344467640919,
+          "mean_predicted_probability": 0.5268008547358395
+        },
+        {
+          "price_band": "(25.0, 40.0]",
+          "count": 430,
+          "acceptance_rate": 0.49534883720930234,
+          "mean_predicted_probability": 0.47005411888219006
+        },
+        {
+          "price_band": "(40.0, 60.0]",
+          "count": 231,
+          "acceptance_rate": 0.45021645021645024,
+          "mean_predicted_probability": 0.427875244579324
+        },
+        {
+          "price_band": "(60.0, 100.0]",
+          "count": 76,
+          "acceptance_rate": 0.4473684210526316,
+          "mean_predicted_probability": 0.4144119623645046
+        },
+        {
+          "price_band": "(100.0, inf]",
+          "count": 6,
+          "acceptance_rate": 0.5,
+          "mean_predicted_probability": 0.32717611470821845
+        }
+      ]
+    },
+    "xgboost": {
+      "roc_auc": 0.9011100182661235,
+      "log_loss": 0.39889511466026306,
+      "brier_score": 0.1278320997953415,
+      "median_inference_ms": 3.706166999108973,
+      "acceptance_rate": 0.5434015525758645,
+      "rows": 1417,
+      "calibration": {
+        "mean_predicted": [
+          0.04811230528035334,
+          0.14473754015282123,
+          0.24612253062103107,
+          0.34654908014249197,
+          0.45536341411726816,
+          0.5491768634596537,
+          0.6509120346501817,
+          0.7544529525672689,
+          0.861552426879038,
+          0.9501087565270682
+        ],
+        "fraction_accepted": [
+          0.06593406593406594,
+          0.18248175182481752,
+          0.31521739130434784,
+          0.35443037974683544,
+          0.47959183673469385,
+          0.5581395348837209,
+          0.6744186046511628,
+          0.7450980392156863,
+          0.8791946308724832,
+          0.9841269841269841
+        ]
+      },
+      "acceptance_by_price_band": [
+        {
+          "price_band": "(0.0, 15.0]",
+          "count": 195,
+          "acceptance_rate": 0.8153846153846154,
+          "mean_predicted_probability": 0.7540768980979919
+        },
+        {
+          "price_band": "(15.0, 25.0]",
+          "count": 479,
+          "acceptance_rate": 0.5365344467640919,
+          "mean_predicted_probability": 0.527614414691925
+        },
+        {
+          "price_band": "(25.0, 40.0]",
+          "count": 430,
+          "acceptance_rate": 0.49534883720930234,
+          "mean_predicted_probability": 0.4762449264526367
+        },
+        {
+          "price_band": "(40.0, 60.0]",
+          "count": 231,
+          "acceptance_rate": 0.45021645021645024,
+          "mean_predicted_probability": 0.43261149525642395
+        },
+        {
+          "price_band": "(60.0, 100.0]",
+          "count": 76,
+          "acceptance_rate": 0.4473684210526316,
+          "mean_predicted_probability": 0.3823866546154022
+        },
+        {
+          "price_band": "(100.0, inf]",
+          "count": 6,
+          "acceptance_rate": 0.5,
+          "mean_predicted_probability": 0.31251662969589233
+        }
+      ]
+    }
+  },
+  "test": {
+    "logistic_regression": {
+      "roc_auc": 0.9082888782605496,
+      "log_loss": 0.3840346428770105,
+      "brier_score": 0.1214209109897575,
+      "median_inference_ms": 3.664750000098138,
+      "acceptance_rate": 0.521680216802168,
+      "rows": 1476,
+      "calibration": {
+        "mean_predicted": [
+          0.050957227000217174,
+          0.1423257602350659,
+          0.24463120258684676,
+          0.34695484414680877,
+          0.45020644658359626,
+          0.5539011051605013,
+          0.6529169757105043,
+          0.753559361629195,
+          0.8523477494994256,
+          0.9531135596704384
+        ],
+        "fraction_accepted": [
+          0.05,
+          0.12574850299401197,
+          0.2641509433962264,
+          0.3793103448275862,
+          0.45121951219512196,
+          0.6621621621621622,
+          0.6049382716049383,
+          0.7787610619469026,
+          0.8520710059171598,
+          0.9684542586750788
+        ]
+      },
+      "acceptance_by_price_band": [
+        {
+          "price_band": "(0.0, 15.0]",
+          "count": 210,
+          "acceptance_rate": 0.7619047619047619,
+          "mean_predicted_probability": 0.7790117543621423
+        },
+        {
+          "price_band": "(15.0, 25.0]",
+          "count": 520,
+          "acceptance_rate": 0.5173076923076924,
+          "mean_predicted_probability": 0.5081524833141502
+        },
+        {
+          "price_band": "(25.0, 40.0]",
+          "count": 482,
+          "acceptance_rate": 0.48132780082987553,
+          "mean_predicted_probability": 0.46885990187572507
+        },
+        {
+          "price_band": "(40.0, 60.0]",
+          "count": 184,
+          "acceptance_rate": 0.41847826086956524,
+          "mean_predicted_probability": 0.4142474868664146
+        },
+        {
+          "price_band": "(60.0, 100.0]",
+          "count": 72,
+          "acceptance_rate": 0.4027777777777778,
+          "mean_predicted_probability": 0.32341186466268207
+        },
+        {
+          "price_band": "(100.0, inf]",
+          "count": 8,
+          "acceptance_rate": 0.375,
+          "mean_predicted_probability": 0.3688551913709702
+        }
+      ]
+    },
+    "xgboost": {
+      "roc_auc": 0.9062893197454104,
+      "log_loss": 0.3880072236061096,
+      "brier_score": 0.1225898265838623,
+      "median_inference_ms": 3.6762500003533205,
+      "acceptance_rate": 0.521680216802168,
+      "rows": 1476,
+      "calibration": {
+        "mean_predicted": [
+          0.047268688155839414,
+          0.1491587616246322,
+          0.25034695203156815,
+          0.35001876950263977,
+          0.45679916355801725,
+          0.5467114182742866,
+          0.6546930382126256,
+          0.7520908868613363,
+          0.8594063308089972,
+          0.9481342481889935
+        ],
+        "fraction_accepted": [
+          0.046511627906976744,
+          0.15172413793103448,
+          0.2268041237113402,
+          0.4074074074074074,
+          0.41379310344827586,
+          0.5945945945945946,
+          0.7263157894736842,
+          0.7647058823529411,
+          0.81875,
+          0.9716088328075709
+        ]
+      },
+      "acceptance_by_price_band": [
+        {
+          "price_band": "(0.0, 15.0]",
+          "count": 210,
+          "acceptance_rate": 0.7619047619047619,
+          "mean_predicted_probability": 0.7843174338340759
+        },
+        {
+          "price_band": "(15.0, 25.0]",
+          "count": 520,
+          "acceptance_rate": 0.5173076923076924,
+          "mean_predicted_probability": 0.5080136656761169
+        },
+        {
+          "price_band": "(25.0, 40.0]",
+          "count": 482,
+          "acceptance_rate": 0.48132780082987553,
+          "mean_predicted_probability": 0.47205621004104614
+        },
+        {
+          "price_band": "(40.0, 60.0]",
+          "count": 184,
+          "acceptance_rate": 0.41847826086956524,
+          "mean_predicted_probability": 0.419864684343338
+        },
+        {
+          "price_band": "(60.0, 100.0]",
+          "count": 72,
+          "acceptance_rate": 0.4027777777777778,
+          "mean_predicted_probability": 0.3105021119117737
+        },
+        {
+          "price_band": "(100.0, inf]",
+          "count": 8,
+          "acceptance_rate": 0.375,
+          "mean_predicted_probability": 0.3039170503616333
+        }
+      ]
+    }
+  },
+  "price_curve_checks": {
+    "logistic_regression": {
+      "checked": 50,
+      "failures": 0,
+      "examples": []
+    },
+    "xgboost": {
+      "checked": 50,
+      "failures": 0,
+      "examples": []
+    }
+  },
+  "splits": {
+    "train": {
+      "start": "2025-01-01 00:00:00+00:00",
+      "end_exclusive": "2025-06-18 00:00:00+00:00",
+      "rows": 6991,
+      "late_labels_excluded": 57
+    },
+    "validation": {
+      "start": "2025-06-18 00:00:00+00:00",
+      "end_exclusive": "2025-07-24 00:00:00+00:00",
+      "rows": 1417,
+      "late_labels_excluded": 59
+    },
+    "test": {
+      "start": "2025-07-24 00:00:00+00:00",
+      "end_exclusive": "2025-08-29 00:00:00+00:00",
+      "rows": 1476
+    },
+    "final_evaluation_as_of": "2025-08-31 13:27:42+00:00"
+  },
+  "dependencies": {
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.4.1",
+    "pandas": "2.3.3",
+    "numpy": "2.5.4",
+    "dagster": "1.13.29"
+  },
+  "config": {
+    "seed": 42,
+    "xgb_trees": 180,
+    "xgb_depth": 3,
+    "learning_rate": 0.045
+  },
+  "test_policy": "Reported once per immutable data/code/config version; never used for selection or approval",
+  "causal_warning": "Predictive synthetic evaluation does not establish real-world incremental profit",
+  "top_features": [
+    {
+      "feature": "numeric__markup_ratio",
+      "importance": 0.5003172755241394
+    },
+    {
+      "feature": "category__customer_segment_occasional",
+      "importance": 0.10017728805541992
+    },
+    {
+      "feature": "category__customer_segment_enterprise",
+      "importance": 0.08583398163318634
+    },
+    {
+      "feature": "category__service_level_ground",
+      "importance": 0.06348782032728195
+    },
+    {
+      "feature": "category__service_level_next_day",
+      "importance": 0.04721192643046379
+    },
+    {
+      "feature": "numeric__shipping_zone",
+      "importance": 0.03789249062538147
+    },
+    {
+      "feature": "numeric__estimated_shipping_cost",
+      "importance": 0.03653419762849808
+    },
+    {
+      "feature": "numeric__fuel_surcharge_pct",
+      "importance": 0.034667178988456726
+    },
+    {
+      "feature": "numeric__weight_lbs",
+      "importance": 0.024214887991547585
+    },
+    {
+      "feature": "numeric__month",
+      "importance": 0.022509125992655754
+    }
+  ],
+  "importance_warning": "Gain importance or absolute standardized coefficients are predictive, not causal"
+}
